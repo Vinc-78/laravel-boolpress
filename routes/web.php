@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
 
@@ -30,3 +31,8 @@ Route::middleware('auth') /* Controlla se un utente è loggato, se si va ad Home
     Route::get('/', 'HomeController@index')->name('home');
 
 });   /* indica il gruppo di route */
+
+
+Route::get("{any?}",function() {
+    return view("guests.home");
+})->where("any", ".*");
