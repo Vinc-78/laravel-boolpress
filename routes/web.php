@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +20,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::middleware('auth') /* Controlla se un utente è loggato, se si va ad Home */
+->name('admin.')
+->prefix('Admin')  /* indica la cartella */
+->namespace('Admin')
+->group( function() {
+    Route::get('/', 'HomeController@index')->name('home');
+});   /* indica il gruppo di route */
