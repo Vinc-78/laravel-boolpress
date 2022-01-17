@@ -24,8 +24,9 @@ Auth::routes();
 
 Route::middleware('auth') /* Controlla se un utente è loggato, se si va ad Home */
 ->name('admin.')
-->prefix('Admin')  /* indica la cartella */
-->namespace('Admin')
+->prefix('admin')  
+->namespace('admin')  /* indica la cartella */
 ->group( function() {
     Route::get('/', 'HomeController@index')->name('home');
+
 });   /* indica il gruppo di route */
