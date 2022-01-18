@@ -95,9 +95,8 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _partials_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/Navbar.vue */ "./resources/js/components/partials/Navbar.vue");
-/* harmony import */ var _partials_TheFooter_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/TheFooter.vue */ "./resources/js/components/partials/TheFooter.vue");
-/* harmony import */ var _partials_Post_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/Post.vue */ "./resources/js/components/partials/Post.vue");
+/* harmony import */ var _partials_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/TheFooter.vue */ "./resources/js/components/partials/TheFooter.vue");
+/* harmony import */ var _partials_Post_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/Post.vue */ "./resources/js/components/partials/Post.vue");
 //
 //
 //
@@ -117,50 +116,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   components: {
-    Navbar: _partials_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    TheFooter: _partials_TheFooter_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Post: _partials_Post_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    TheFooter: _partials_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Post: _partials_Post_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      helloMsg: "Benvenuto in Matrix",
+      message: " Laravel BoolPress",
       postsList: []
     };
   },
@@ -172,54 +138,6 @@ __webpack_require__.r(__webpack_exports__);
     });
   }
 });
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/Navbar.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/Navbar.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -253,8 +171,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "Post",
   props: {
     post: {
-      type: Object,
-      required: true
+      type: Object
     }
   }
 });
@@ -301,7 +218,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@media (min-width: 1200px) {\n.fs-1 {\n    font-size: 2.5rem !important;\n}\n.fs-2 {\n    font-size: 2rem !important;\n}\n.fs-3 {\n    font-size: 1.75rem !important;\n}\n.fs-4 {\n    font-size: 1.5rem !important;\n}\n}\nbody {\n  font-size: 1.25rem;\n}\nhr {\n  background-color: #dee2e6;\n  opacity: 1;\n}\np {\n  margin: 2rem 0;\n}\np a {\n  text-decoration: underline;\n}\nblockquote {\n  font-style: italic;\n  color: #6c757d;\n}\n.btn {\n  letter-spacing: 0.0625em;\n}\n.form-floating input,\n.form-floating textarea {\n  border-left: 0;\n  border-right: 0;\n  border-top: 0;\n}\n.form-floating input:focus,\n.form-floating textarea:focus {\n  box-shadow: none;\n}\n.form-floating label {\n  color: #6c757d;\n}\n#mainNav {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 1030;\n  border-bottom: 1px solid #dee2e6;\n  background-color: #fff;\n  font-family: \"Open Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n}\n#mainNav .navbar-brand {\n  font-weight: 800;\n}\n#mainNav .navbar-toggler {\n  font-size: 0.75rem;\n  font-weight: 800;\n  padding: 0.75rem;\n  text-transform: uppercase;\n}\n#mainNav .navbar-nav > li.nav-item > a.nav-link {\n  font-size: 0.75rem;\n  font-weight: 800;\n  letter-spacing: 0.0625em;\n  text-transform: uppercase;\n}\n@media (min-width: 992px) {\n#mainNav {\n    border-bottom: 1px solid transparent;\n    background: transparent;\n}\n#mainNav .navbar-brand {\n    color: #fff;\n}\n#mainNav .navbar-brand:focus,\n#mainNav .navbar-brand:hover {\n    color: rgba(255, 255, 255, 0.8);\n}\n#mainNav .navbar-nav > li.nav-item > a.nav-link {\n    color: #fff;\n}\n#mainNav .navbar-nav > li.nav-item > a.nav-link:focus,\n#mainNav .navbar-nav > li.nav-item > a.nav-link:hover {\n    color: rgba(255, 255, 255, 0.8);\n}\n}\n@media (min-width: 992px) {\n#mainNav {\n    transition: background-color 0.2s;\n    /* Force Hardware Acceleration in WebKit */\n    transform: translate3d(0, 0, 0);\n    -webkit-backface-visibility: hidden;\n    backface-visibility: hidden;\n}\n#mainNav.is-fixed {\n    /* when the user scrolls down, we hide the header right above the viewport */\n    position: fixed;\n    top: -83px;\n    transition: transform 0.2s;\n    border-bottom: 1px solid white;\n    background-color: rgba(255, 255, 255, 0.9);\n}\n#mainNav.is-fixed .navbar-brand {\n    color: #212529;\n}\n#mainNav.is-fixed .navbar-brand:focus,\n#mainNav.is-fixed .navbar-brand:hover {\n    color: #0085a1;\n}\n#mainNav.is-fixed .navbar-nav > li.nav-item > a {\n    color: #212529;\n}\n#mainNav.is-fixed .navbar-nav > li.nav-item > a:focus,\n#mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {\n    color: #0085a1;\n}\n#mainNav.is-visible {\n    /* if the user changes the scrolling direction, we show the header */\n    transform: translate3d(0, 100%, 0);\n}\n}\nfooter {\n  padding-top: 3rem;\n  padding-bottom: 3rem;\n}\nheader.masthead {\n  position: relative;\n  margin-bottom: 3rem;\n  padding-top: calc(8rem + 57px);\n  padding-bottom: 8rem;\n  background: no-repeat center center;\n  background-color: #6c757d;\n  background-size: cover;\n  background-attachment: scroll;\n}\nheader.masthead:before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #212529;\n  opacity: 0.5;\n}\nheader.masthead .page-heading,\nheader.masthead .post-heading,\nheader.masthead .site-heading {\n  color: #fff;\n}\nheader.masthead .page-heading,\nheader.masthead .site-heading {\n  text-align: center;\n}\nheader.masthead .page-heading h1,\nheader.masthead .page-heading .h1,\nheader.masthead .site-heading h1,\nheader.masthead .site-heading .h1 {\n  font-size: 3rem;\n}\nheader.masthead .page-heading .subheading,\nheader.masthead .site-heading .subheading {\n  font-size: 1.5rem;\n  font-weight: 300;\n  line-height: 1.1;\n  display: block;\n  margin-top: 0.625rem;\n  font-family: \"Open Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n}\nheader.masthead .post-heading h1,\nheader.masthead .post-heading .h1 {\n  font-size: 2.25rem;\n}\nheader.masthead .post-heading .meta,\nheader.masthead .post-heading .subheading {\n  line-height: 1.1;\n  display: block;\n}\nheader.masthead .post-heading .subheading {\n  font-size: 1.5rem;\n  font-weight: 600;\n  margin: 0.75rem 0 2rem;\n  font-family: \"Open Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n}\nheader.masthead .post-heading .meta {\n  font-size: 1.25rem;\n  font-weight: 300;\n  font-style: italic;\n  font-family: \"Lora\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n}\nheader.masthead .post-heading .meta a {\n  color: #fff;\n}\n@media (min-width: 992px) {\nheader.masthead {\n    padding-top: 12.5rem;\n    padding-bottom: 12.5rem;\n}\nheader.masthead .page-heading h1,\nheader.masthead .page-heading .h1,\nheader.masthead .site-heading h1,\nheader.masthead .site-heading .h1 {\n    font-size: 5rem;\n}\nheader.masthead .post-heading h1,\nheader.masthead .post-heading .h1 {\n    font-size: 3.5rem;\n}\nheader.masthead .post-heading .subheading {\n    font-size: 1.875rem;\n}\n}\n.section-heading {\n  font-size: 2.25rem;\n  font-weight: 700;\n  margin-top: 3.75rem;\n}\n.caption {\n  font-size: 0.875rem;\n  font-style: italic;\n  display: block;\n  margin: 0;\n  padding: 0.625rem;\n  text-align: center;\n}\n.post-preview > a {\n  color: #212529;\n}\n.post-preview > a:focus,\n.post-preview > a:hover {\n  text-decoration: none;\n  color: #0085a1;\n}\n.post-preview > a > .post-title {\n  font-size: 1.875rem;\n  margin-top: 1.875rem;\n  margin-bottom: 0.625rem;\n}\n.post-preview > a > .post-subtitle {\n  font-weight: 300;\n  margin-bottom: 0.625rem;\n}\n.post-preview > .post-meta {\n  font-size: 1.125rem;\n  font-style: italic;\n  margin-top: 0;\n  color: #6c757d;\n}\n.post-preview > .post-meta > a {\n  text-decoration: none;\n}\n@media (min-width: 992px) {\n.post-preview > a > .post-title {\n    font-size: 2.25rem;\n}\n}", ""]);
+exports.push([module.i, ".title {\n  text-align: center;\n  margin-bottom: 90px;\n}", ""]);
 
 // exports
 
@@ -1420,167 +1337,20 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("Navbar"),
+      _c("h1", { staticClass: "title" }, [_vm._v(_vm._s(_vm.message))]),
       _vm._v(" "),
-      _vm._m(0),
+      _c("h2", [_vm._v("Sezione Post")]),
       _vm._v(" "),
-      _c("div", { staticClass: "container px-4 px-lg-5" }, [
-        _c("div", { staticClass: "row gx-4 gx-lg-5 justify-content-center" }, [
-          _c(
-            "div",
-            { staticClass: "col-md-10 col-lg-8 col-xl-7" },
-            [
-              _vm.postsList.length === 0
-                ? _c("h2", { staticClass: "mb-5 text-center" }, [
-                    _vm._v(
-                      "\n                    Ancora nessun dato disponibile...\n                "
-                    ),
-                  ])
-                : _vm._l(_vm.postsList, function (post) {
-                    return _c("Post", { key: post.id, attrs: { post: post } })
-                  }),
-            ],
-            2
-          ),
-        ]),
-      ]),
+      _vm._l(_vm.postsList, function (post) {
+        return _c("Post", { key: post.id, attrs: { post: post } })
+      }),
       _vm._v(" "),
       _c("TheFooter"),
     ],
-    1
+    2
   )
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "header",
-      {
-        staticClass: "masthead",
-        staticStyle: { "background-image": "url('')" },
-      },
-      [
-        _c("div", { staticClass: "container position-relative px-4 px-lg-5" }, [
-          _c(
-            "div",
-            { staticClass: "row gx-4 gx-lg-5 justify-content-center" },
-            [
-              _c("div", { staticClass: "col-md-10 col-lg-8 col-xl-7" }, [
-                _c("div", { staticClass: "site-heading" }, [
-                  _c("h1", [_vm._v("Laravel Blog")]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "subheading" }, [
-                    _vm._v(
-                      "\n                            The most wonderful blog that will never exist\n                        "
-                    ),
-                  ]),
-                ]),
-              ]),
-            ]
-          ),
-        ]),
-      ]
-    )
-  },
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/Navbar.vue?vue&type=template&id=40985fd2&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/Navbar.vue?vue&type=template&id=40985fd2& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      {
-        staticClass: "navbar navbar-expand-lg navbar-light",
-        attrs: { id: "mainNav" },
-      },
-      [
-        _c("div", { staticClass: "container px-4 px-lg-5" }, [
-          _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
-            _vm._v("Laravel Blog"),
-          ]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "navbar-toggler",
-              attrs: {
-                type: "button",
-                "data-bs-toggle": "collapse",
-                "data-bs-target": "#navbarResponsive",
-                "aria-controls": "navbarResponsive",
-                "aria-expanded": "false",
-                "aria-label": "Toggle navigation",
-              },
-            },
-            [
-              _vm._v("\n            Menu\n            "),
-              _c("i", { staticClass: "fas fa-bars" }),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "collapse navbar-collapse",
-              attrs: { id: "navbarResponsive" },
-            },
-            [
-              _c("ul", { staticClass: "navbar-nav ms-auto py-4 py-lg-0" }, [
-                _c("li", { staticClass: "nav-item" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "nav-link px-lg-3 py-3 py-lg-4",
-                      attrs: { href: "/" },
-                    },
-                    [_vm._v("Home")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "nav-item" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "nav-link px-lg-3 py-3 py-lg-4",
-                      attrs: { href: "login" },
-                    },
-                    [_vm._v("Login")]
-                  ),
-                ]),
-              ]),
-            ]
-          ),
-        ]),
-      ]
-    )
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -1602,7 +1372,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "post-preview" }, [
+  return _c("div", { staticClass: "post-preview my-3" }, [
     _c("a", { attrs: { href: "post.html" } }, [
       _c("h2", { staticClass: "post-title" }, [
         _vm._v("\n            " + _vm._s(_vm.post.title) + "\n        "),
@@ -13923,75 +13693,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/partials/Navbar.vue":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/partials/Navbar.vue ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Navbar_vue_vue_type_template_id_40985fd2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar.vue?vue&type=template&id=40985fd2& */ "./resources/js/components/partials/Navbar.vue?vue&type=template&id=40985fd2&");
-/* harmony import */ var _Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar.vue?vue&type=script&lang=js& */ "./resources/js/components/partials/Navbar.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Navbar_vue_vue_type_template_id_40985fd2___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Navbar_vue_vue_type_template_id_40985fd2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/partials/Navbar.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/partials/Navbar.vue?vue&type=script&lang=js&":
-/*!******************************************************************************!*\
-  !*** ./resources/js/components/partials/Navbar.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Navbar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/Navbar.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/partials/Navbar.vue?vue&type=template&id=40985fd2&":
-/*!************************************************************************************!*\
-  !*** ./resources/js/components/partials/Navbar.vue?vue&type=template&id=40985fd2& ***!
-  \************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_40985fd2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Navbar.vue?vue&type=template&id=40985fd2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/Navbar.vue?vue&type=template&id=40985fd2&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_40985fd2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_40985fd2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

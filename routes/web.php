@@ -18,22 +18,25 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 }); */
 
-
 Auth::routes();
 
+/* Route::get('/home', 'HomeController@index')->name('home'); */
 
-
-Route::middleware('auth') /* Controlla se un utente è loggato, se si va ad Home */
+Route::middleware('auth')
+->namespace('admin')
 ->name('admin.')
-->prefix('admin')  
-->namespace('admin')  /* indica la cartella */
+->prefix('admin')
 ->group( function() {
+
     Route::get('/', 'HomeController@index')->name('home');
 
     Route::resource("users", "UserController");
 
-});   /* indica il gruppo di route */
+});
 
+/* Route::get('/', function () {    
+    return view('guests.home');
+}); */                               //sostituita con any in modo che se non riconosce la rotta va comunque a guest
 
 Route::get("{any?}",function() {    // serve a creare una rotta generica che ho se clicco un url generico 
     return view("guests.home");

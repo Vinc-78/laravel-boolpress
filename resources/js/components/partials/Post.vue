@@ -1,6 +1,6 @@
 <template>
     <!-- Post preview-->
-    <div class="post-preview">
+    <div class="post-preview my-3">
         <a href="post.html">
             <h2 class="post-title">
                 {{ post.title }}
@@ -21,7 +21,7 @@ export default {
     props: {
         post: {
             type: Object,
-            required: true,
+           
         },
     },
 };
