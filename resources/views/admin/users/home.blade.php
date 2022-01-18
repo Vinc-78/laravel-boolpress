@@ -20,7 +20,7 @@
       @foreach($usersList as $user)
       <li
         class="list-group-item d-flex align-items-center justify-content-between">
-        {{$user->name}} - {{$user->email}} 
+        {{$user->name}} - {{$user->email}} ({{$user->role}})
 
         <a href="{{route('admin.users.edit', $user->id)}}" class="btn btn-link">
           Modifica

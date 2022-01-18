@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class UserController extends Controller
 {
@@ -12,10 +15,18 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+    public function index() {
+        $role = Auth::user()->role;
+    
+        if ($role !== "admin") {
+          throw new HttpException(401, "Permessi non sufficienti");
+        }
+    
+        $usersList = User::all();
+    
+        return view("admin.users.home", compact("usersList"));
+      }
+    
 
     /**
      * Show the form for creating a new resource.
