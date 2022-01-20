@@ -14,7 +14,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h1> Sei in Admin.home </h1>
+                    <h1><span style="font-weight: bolder">{{ Auth::user()->name }}</span> -  Sei in Admin.home </h1>
 
                     
                     
