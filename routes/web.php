@@ -32,6 +32,8 @@ Route::middleware('auth')
 
     Route::resource("users", "UserController");
 
+    Route::resource("posts", "PostController");
+
 });
 
 /* Route::get('/', function () {    

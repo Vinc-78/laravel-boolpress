@@ -1,7 +1,7 @@
 <template>
     <!-- Post preview-->
     <div class="post-preview my-3">
-        <a href="post.html">
+        <a :href="'/posts/' + post.id">  <!-- Questo mi permette lo show dei post post.show -->
             <h2 class="post-title">
                 {{ post.title }}
             </h2>
