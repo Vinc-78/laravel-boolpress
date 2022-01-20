@@ -22,7 +22,7 @@ class PostController extends Controller
         if ($role === 'admin'){
             $postList = Post::all();
         } else {
-            $postList =Post::where("user_id", Auth::user()->id->get());
+            $postList =Post::where("user_id", Auth::user()->id)->get();
         }
 
         return view('admin.posts.index', compact('postList'));
@@ -35,7 +35,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
     /**
@@ -46,7 +46,15 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+
+        $post->fill($request->all());
+
+        $post->user_id = Auth::user()->id; /* Qui specifico l'utente */
+
+        $post->save();
+
+        return redirect()->route("admin.posts.index")->with('status','Post Creato Correttamente .');
     }
 
     /**
