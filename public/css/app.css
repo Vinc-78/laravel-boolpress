@@ -10962,3 +10962,8 @@ a.text-dark:focus {
   }
 }
 
+.post-view li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+

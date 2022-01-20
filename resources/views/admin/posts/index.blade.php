@@ -28,16 +28,18 @@
             @endif
 
             @if(count($postList) === 0)
-            Non sono presenti Post , creane uno :) 
+            Non sono presenti Post per: <span style="font-size:20px; color:blue;">
+                {{ Auth::user()->name }}</span>, creane uno :) 
             @else
+
             <ul class="list-group">
             @foreach($postList as $post)
             <li
                 class="list-group-item d-flex align-items-center justify-content-between">
-                <ul>
-                    <li><h2>Titolo:</h2><br>{{$post->title}}</li>
-                    <li><h3>Contenuto</h3><br>{{$post->body}}</li>
-                    <li><img src="{{$post->coverImg}}" alt="{{$post->title}}"></li>
+                <ul class="post-view">
+                    <li><h2>Titolo:</h2>{{$post->title}}</li>
+                    <li><h3>Contenuto</h3>{{$post->body}}</li>
+                    <li><img style="height:200px;" src="{{$post->coverImg}}" alt="{{$post->title}}"></li>
                 </ul>
                 
 
