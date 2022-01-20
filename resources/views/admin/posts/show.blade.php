@@ -28,6 +28,11 @@
 
           <a href="{{route('admin.posts.edit', $post->id)}}"
             class="btn btn-outline-info mr-3" >Modifica</a>
+
+            <a href="{{route('admin.posts.index')}}"
+            class="btn btn-outline-info mr-3" >Tutti i Post</a>
+         
+        </div>
           
         </div>
 

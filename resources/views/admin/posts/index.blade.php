@@ -43,11 +43,11 @@
                 </ul>
                 
                 <div class="d-flex">
-                    <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-link">
+                    <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-outline-info mr-3">
                         Visualizza
                         </a>
 
-                    <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-link">
+                    <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-outline-info mr-3">
                         Modifica
                         </a>
 
