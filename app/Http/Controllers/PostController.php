@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     function index() {
+        $postInterni = Post::all();
         $postsList = [
           [
             "userId" => 1,
-            "id" => 1,
+            "id" => 1 . "i",
             "title" => "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
             "body" => "quia et suscipit
     suscipit recusandae consequuntur expedita et cum
@@ -19,7 +21,7 @@ class PostController extends Controller
           ],
           [
             "userId" => 1,
-            "id" => 2,
+            "id" => 2  . "i",
             "title" => "qui est esse",
             "body" => "est rerum tempore vitae
     sequi sint nihil reprehenderit dolor beatae ea dolores neque
@@ -28,7 +30,7 @@ class PostController extends Controller
           ],
           [
             "userId" => 1,
-            "id" => 3,
+            "id" => 3 . "i",
             "title" => "ea molestias quasi exercitationem repellat qui ipsa sit aut",
             "body" => "et iusto sed quo iure
     voluptatem occaecati omnis eligendi aut ad
@@ -36,10 +38,14 @@ class PostController extends Controller
     molestiae porro eius odio et labore et velit aut"
           ],
         ];
+
+        /* Quin inserisco tutti i post  */
     
-    
+     $allPost =[];
+
+     $allPost =[...$postInterni, ...$postsList];
        
         
-        return $postsList;
+        return $allPost;
       }
 }

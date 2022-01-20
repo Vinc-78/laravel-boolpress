@@ -12,6 +12,8 @@
         <p class="post-meta">
             {{ post.body }}
         </p>
+        
+        <img v-if="post.coverImg" style="height:250px" :src="post.coverImg " alt="">
     </div>
 </template>
 

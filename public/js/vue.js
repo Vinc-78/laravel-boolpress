@@ -167,6 +167,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Post",
   props: {
@@ -1382,6 +1384,13 @@ var render = function () {
     _c("p", { staticClass: "post-meta" }, [
       _vm._v("\n        " + _vm._s(_vm.post.body) + "\n    "),
     ]),
+    _vm._v(" "),
+    _vm.post.coverImg
+      ? _c("img", {
+          staticStyle: { height: "250px" },
+          attrs: { src: _vm.post.coverImg, alt: "" },
+        })
+      : _vm._e(),
   ])
 }
 var staticRenderFns = []
