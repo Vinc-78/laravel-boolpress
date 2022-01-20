@@ -42,10 +42,17 @@
                     <li><img style="height:200px;" src="{{$post->coverImg}}" alt="{{$post->title}}"></li>
                 </ul>
                 
+                <div class="d-flex">
+                    <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-link">
+                        Visualizza
+                        </a>
 
-                <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-link">
-                Modifica
-                </a>
+                    <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-link">
+                        Modifica
+                        </a>
+
+                </div>
+                
             </li>
             @endforeach
             </ul>
