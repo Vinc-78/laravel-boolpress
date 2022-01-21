@@ -48,6 +48,21 @@
 
         </div>
 
+         {{-- Inserisco la select che prende le option dalla tabella tags --}}
+         <div class="form-group">
+          <label class="form-label">Tags</label>
+          <select name="tags[]" class="form-control ">
+            @foreach ($tags as $tag)
+
+              <option value="{{$tag->id}}"> 
+                {{$tag->name}} </option>
+                
+            @endforeach
+             
+          </select>
+
+        </div>
+
 
         <div class="form-group">
           <label for="body" class="form-label">Contenuto</label>

@@ -19,6 +19,12 @@
           
         </div>
 
+        <div class="form-group">
+          <label class="form-label">Tags</label>
+          <h3>{{ $post->tag->name }}</h3>
+          
+        </div>
+
 
         <div class="form-group">
          <p> {{ $post->body }} </p>
