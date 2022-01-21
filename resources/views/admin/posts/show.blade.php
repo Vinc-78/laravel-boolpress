@@ -21,7 +21,12 @@
 
         <div class="form-group">
           <label class="form-label">Tags</label>
-          <h3>{{ $post->tag->name }}</h3>
+          
+          @foreach ($post->tags as $tag)
+
+            <span class="badge bg-primary text-white">{{$tag->name}}</span>
+              
+          @endforeach
           
         </div>
 

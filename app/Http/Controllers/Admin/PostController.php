@@ -106,9 +106,10 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $data = $request->all();
-
         $post->update($data);
-    
+
+        $post->tags()->sync($data["tags"]);
+
         return redirect()->route("admin.posts.index")->with(["status" , "Post aggiornati correttamente!"]);
     }
 
