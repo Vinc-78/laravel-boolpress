@@ -5,7 +5,7 @@
             <h2 class="post-title">
                 {{ post.title }}
             </h2>
-           <p class="post-meta">
+           <p v-if="post.category && post.category.name" class="post-meta">
             {{post.category.name}}
            </p>
         </a>

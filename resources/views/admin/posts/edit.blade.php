@@ -43,7 +43,8 @@
 
         <div class="form-group">
           <label for="body" class="form-label">Contenuto</label>
-          <textarea  class="form-control" id="body" name="body" rows="3" value="{{ $post->body }}">
+          <textarea  class="form-control" id="body" name="body" rows="3" >
+            {!! $post->body !!}
           </textarea >
 
           @error('body')

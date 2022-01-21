@@ -1380,9 +1380,11 @@ var render = function () {
         _vm._v("\n            " + _vm._s(_vm.post.title) + "\n        "),
       ]),
       _vm._v(" "),
-      _c("p", { staticClass: "post-meta" }, [
-        _vm._v("\n        " + _vm._s(_vm.post.category.name) + "\n       "),
-      ]),
+      _vm.post.category && _vm.post.category.name
+        ? _c("p", { staticClass: "post-meta" }, [
+            _vm._v("\n        " + _vm._s(_vm.post.category.name) + "\n       "),
+          ])
+        : _vm._e(),
     ]),
     _vm._v(" "),
     _c("p", { staticClass: "post-meta" }, [
