@@ -1379,6 +1379,10 @@ var render = function () {
       _c("h2", { staticClass: "post-title" }, [
         _vm._v("\n            " + _vm._s(_vm.post.title) + "\n        "),
       ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "post-meta" }, [
+        _vm._v("\n        " + _vm._s(_vm.post.category.name) + "\n       "),
+      ]),
     ]),
     _vm._v(" "),
     _c("p", { staticClass: "post-meta" }, [

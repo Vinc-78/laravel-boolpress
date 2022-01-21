@@ -37,8 +37,9 @@
             <li
                 class="list-group-item d-flex align-items-center justify-content-between">
                 <ul class="post-view">
-                    <li><h2>Titolo:</h2>{{$post->title}}</li>
-                    <li><h3>Contenuto</h3>{{$post->body}}</li>
+                    <li><h2><span style="color:blue">Titolo:</span> {{$post->title}}</h2></li>
+                    <li><h2><span style="color:blue">Categoria:</span> {{$post->category->name}}</h2></li>
+                    <li><h3><span style="color:blue">Contenuto:</span> {{$post->body}}</h3></li>
                     <li><img style="height:200px;" src="{{$post->coverImg}}" alt="{{$post->title}}"></li>
                 </ul>
                 

@@ -25,6 +25,20 @@
           </span>
           @enderror
         </div>
+{{-- Inserisco la select che prende le option dalla tabella category --}}
+        <div class="form-group">
+          <label class="form-label">Categoria</label>
+          <select name="category_id" class="form-control ">
+            @foreach ($categories as $category)
+
+              <option value="{{$category->id}}"
+                @if ($category->id===$post->category_id) selected @endif> {{$category->name}} </option>
+                
+            @endforeach
+             
+          </select>
+
+        </div>
 
 
         <div class="form-group">

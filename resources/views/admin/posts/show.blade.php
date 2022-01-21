@@ -13,6 +13,12 @@
           
         </div>
 
+        <div class="form-group">
+          <label class="form-label">Categoria</label>
+          <h3>{{ $post->category->name }}</h3>
+          
+        </div>
+
 
         <div class="form-group">
          <p> {{ $post->body }} </p>

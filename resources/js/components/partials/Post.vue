@@ -5,9 +5,9 @@
             <h2 class="post-title">
                 {{ post.title }}
             </h2>
-            <!-- <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
-            </h3> -->
+           <p class="post-meta">
+            {{post.category.name}}
+           </p>
         </a>
         <p class="post-meta">
             {{ post.body }}
