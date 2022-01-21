@@ -5,10 +5,22 @@
             <h2 class="post-title">
                 {{ post.title }}
             </h2>
-           <p v-if="post.category && post.category.name" class="post-meta">
-            {{post.category.name}}
-           </p>
+                    
         </a>
+         <p v-if="post.category && post.category.name" class="post-meta">
+            Categoria: {{post.category.name}}
+           </p>
+        <p v-if="post.tags " class="post-meta">
+            Tags: 
+            <span
+            v-for="tag in post.tags"
+            :key="tag.id"
+            class="badge bg primary text-white">
+            {{tag.name}}
+            </span>
+           </p>
+
+
         <p class="post-meta">
             {{ post.body }}
         </p>

@@ -54,15 +54,14 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   $data = $request->all(); 
         $post = new Post();
-
         $post->fill($request->all());
-
         $post->user_id = Auth::user()->id; /* Qui specifico l'utente */
-
         $post->save();
+        $post->tags()->sync($data["tags"]);
 
+    
         return redirect()->route("admin.posts.index")->with('status','Post Creato Correttamente .');
     }
 
