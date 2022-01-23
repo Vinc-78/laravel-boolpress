@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     function index() {
-        $postInterni = Post::with('category')->get();
+        $postInterni = Post::with('category')->with('tags')->get();
         
 
         $postsList = [

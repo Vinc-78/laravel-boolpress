@@ -39,7 +39,11 @@
                 <ul class="post-view">
                     <li><h2><span style="color:blue">Titolo:</span> {{$post->title}}</h2></li>
                     <li><h2><span style="color:blue">Categoria:</span> {{$post->category->name}}</h2></li>
-                    <li><h2><span style="color:blue">Tags:</span> {{$post->tag->name}}</h2></li>
+
+                    @foreach($post->tags as $tag)
+                    <span class="badge bg-primary text-white">{{$tag->name}}</span>
+                    @endforeach
+                    
                     <li><h3><span style="color:blue">Contenuto:</span> {{$post->body}}</h3></li>
                     <li><img style="height:200px;" src="{{$post->coverImg}}" alt="{{$post->title}}"></li>
                 </ul>

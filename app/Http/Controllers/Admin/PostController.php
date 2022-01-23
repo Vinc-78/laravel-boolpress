@@ -20,6 +20,8 @@ class PostController extends Controller
     {
         $role=Auth::user()->role;
         $postList = []; 
+        
+        $categories =Category::all();
 
         if ($role === 'admin'){
             $postList = Post::all();
@@ -27,7 +29,11 @@ class PostController extends Controller
             $postList =Post::where("user_id", Auth::user()->id)->get();
         }
 
-        return view('admin.posts.index', compact('postList'));
+        return view('admin.posts.index', [
+                                'postList'=>$postList,
+                                'categories'=>$categories,
+                               
+                         ]);
     }
 
     /**

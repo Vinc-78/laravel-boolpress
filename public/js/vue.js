@@ -169,6 +169,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Post",
   props: {
@@ -1379,13 +1392,38 @@ var render = function () {
       _c("h2", { staticClass: "post-title" }, [
         _vm._v("\n            " + _vm._s(_vm.post.title) + "\n        "),
       ]),
-      _vm._v(" "),
-      _vm.post.category && _vm.post.category.name
-        ? _c("p", { staticClass: "post-meta" }, [
-            _vm._v("\n        " + _vm._s(_vm.post.category.name) + "\n       "),
-          ])
-        : _vm._e(),
     ]),
+    _vm._v(" "),
+    _vm.post.category && _vm.post.category.name
+      ? _c("p", { staticClass: "post-meta" }, [
+          _vm._v(
+            "\n        Categoria: " +
+              _vm._s(_vm.post.category.name) +
+              "\n       "
+          ),
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.post.tags
+      ? _c(
+          "p",
+          { staticClass: "post-meta" },
+          [
+            _vm._v("\n        Tags: \n        "),
+            _vm._l(_vm.post.tags, function (tag) {
+              return _c(
+                "span",
+                {
+                  key: tag.id,
+                  staticClass: "badge bg-primary mx-1 text-white",
+                },
+                [_vm._v("\n        " + _vm._s(tag.name) + "\n        ")]
+              )
+            }),
+          ],
+          2
+        )
+      : _vm._e(),
     _vm._v(" "),
     _c("p", { staticClass: "post-meta" }, [
       _vm._v("\n        " + _vm._s(_vm.post.body) + "\n    "),

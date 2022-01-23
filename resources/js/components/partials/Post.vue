@@ -10,12 +10,13 @@
          <p v-if="post.category && post.category.name" class="post-meta">
             Categoria: {{post.category.name}}
            </p>
+
         <p v-if="post.tags " class="post-meta">
             Tags: 
             <span
             v-for="tag in post.tags"
             :key="tag.id"
-            class="badge bg primary text-white">
+            class="badge bg-primary mx-1 text-white">
             {{tag.name}}
             </span>
            </p>
