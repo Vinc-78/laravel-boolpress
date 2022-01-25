@@ -1388,7 +1388,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "post-preview my-3" }, [
-    _c("a", { attrs: { href: "/admin/posts/" + _vm.post.id } }, [
+    _c("a", { attrs: { href: "/admin/posts/" + _vm.post.slug } }, [
       _c("h2", { staticClass: "post-title" }, [
         _vm._v("\n            " + _vm._s(_vm.post.title) + "\n        "),
       ]),
