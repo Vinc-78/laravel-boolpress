@@ -8,9 +8,37 @@ use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
+    private function generateSlug($title) {
+        $slug = Str::slug($title);
+    
+        // controllo se esiste un post con lo stesso slug
+        $alreadyExists = Post::where("slug", $slug)->first();
+        $counter = 1;
+    
+        // Se esiste, devo creare un nuovo slug
+        while ($alreadyExists) {
+          // genera un nuovo slug
+          $newSlug = $slug . "-" . $counter;
+    
+          // cerca a db se esiste già un elemento con questo nuovo slug
+          $alreadyExists = Post::where("slug", $newSlug)->first();
+    
+          // incrementiamo il contatore
+          $counter++;
+    
+          // se non è stato trovato alcun post,
+          // salvo il nuovo slug dentro la variable $slug;
+          if (!$alreadyExists) {
+            $slug = $newSlug;
+          }
+        }
+        return $slug;
+    }
+  
     /**
      * Display a listing of the resource.
      *
@@ -60,12 +88,23 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   $data = $request->all(); 
+    {  
+        
+        $data = $request->all(); 
         $post = new Post();
+
         $post->fill($request->all());
+
+        $post->slug=$this->generateSlug($data['title']); /* Richiamo la funzione slug */
+
         $post->user_id = Auth::user()->id; /* Qui specifico l'utente */
         $post->save();
-        $post->tags()->sync($data["tags"]);
+
+        if(key_exists("tags",$data)){
+
+            $post->tags()->sync($data["tags"]);
+
+        }
 
     
         return redirect()->route("admin.posts.index")->with('status','Post Creato Correttamente .');
@@ -77,8 +116,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($slug)
     {
+        $post =Post::where("slug",$slug)->first();
+
         return view('admin.posts.show', compact('post'));
     }
 
@@ -88,8 +129,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($slug)
     {
+        $post = Post::where("slug", $slug)->first();
+        
         $categories =Category::all();
 
         $tags = Tag::all(); 
@@ -108,12 +151,27 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Post $post, $slug)
     {
+        $post = Post::where("slug", $slug)->first();
         $data = $request->all();
-        $post->update($data);
+        $oldTitle = $post->title;
+        $titleChanged = $oldTitle != $data["title"];
 
-        $post->tags()->sync($data["tags"]);
+       /*  $post->update($data); per non salvare due volte uso prima fill e poi save */
+
+        $post->fill($data);
+
+        if($titleChanged){
+            $post->slug = $this->generateSlug($data["title"]);
+        }
+        $post->save();
+
+        if(key_exists("tags",$data)){
+
+            $post->tags()->sync($data["tags"]);
+
+        }
 
         return redirect()->route("admin.posts.index")->with(["status" , "Post aggiornati correttamente!"]);
     }
@@ -124,8 +182,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($slug)
     {
+        $post = Post::where("slug", $slug)->first();
         $post->tags->detach();
         $post->delete();
 

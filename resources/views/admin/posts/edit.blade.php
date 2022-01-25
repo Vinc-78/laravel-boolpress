@@ -5,7 +5,7 @@
 @section('content')
 
   <div class="container">
-    <form action="{{ route('admin.posts.update', $post->id) }}" method="post"
+    <form action="{{ route('admin.posts.update', $post->slug) }}" method="post"
       class="mb-5">
       @csrf
       @method('put')

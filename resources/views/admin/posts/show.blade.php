@@ -43,7 +43,7 @@
 
         <div class="d-flex">
 
-          <a href="{{route('admin.posts.edit', $post->id)}}"
+          <a href="{{route('admin.posts.edit', $post->slug)}}"
             class="btn btn-outline-info mr-3" >Modifica</a>
 
             <a href="{{route('admin.posts.index')}}"
