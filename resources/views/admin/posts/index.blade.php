@@ -64,7 +64,16 @@
             </ul>
             @endif
 
+            <div class="d-flex justify-content-center">
+
+                {{$postList->links()}}
+
+            </div>
+      
+
         </div>
+
+       
         
 </div>
 @endsection

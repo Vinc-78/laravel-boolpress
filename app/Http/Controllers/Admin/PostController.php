@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 class PostController extends Controller
 {
     private function generateSlug($title) {
+        
         $slug = Str::slug($title);
     
         // controllo se esiste un post con lo stesso slug
@@ -52,9 +53,9 @@ class PostController extends Controller
         $categories =Category::all();
 
         if ($role === 'admin'){
-            $postList = Post::all();
+            $postList = Post::paginate(3);
         } else {
-            $postList =Post::where("user_id", Auth::user()->id)->get();
+            $postList =Post::where("user_id", Auth::user()->id)->paginate(3);
         }
 
         return view('admin.posts.index', [

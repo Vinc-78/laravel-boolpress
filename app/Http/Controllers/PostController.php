@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     function index() {
-        $postInterni = Post::with('category')->with('tags')->get();
+
+        $postInterni = Post::with('category')->with('tags')->paginate(2);
         
 
       

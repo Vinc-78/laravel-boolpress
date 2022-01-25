@@ -116,6 +116,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -127,15 +151,25 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       message: " Laravel BoolPress",
-      postsList: []
+      postsList: [],
+      currentPage: 1,
+      lastPage: null
     };
   },
-  mounted: function mounted() {
-    var _this = this;
+  methods: {
+    getData: function getData() {
+      var _this = this;
 
-    window.axios.get("/api/posts").then(function (resp) {
-      _this.postsList = resp.data;
-    });
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      window.axios.get("/api/posts?page=" + page).then(function (resp) {
+        _this.postsList = resp.data.data;
+        _this.currentPage = resp.data.current_page;
+        _this.lastPage = resp.data.lastPage;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getData();
   }
 });
 
@@ -1359,6 +1393,78 @@ var render = function () {
       _vm._l(_vm.postsList, function (post) {
         return _c("Post", { key: post.id, attrs: { post: post } })
       }),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col justify-content-center d-flex" }, [
+          _c("nav", [
+            _c(
+              "ul",
+              { staticClass: "pagination" },
+              [
+                _c("li", [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "page-link",
+                      on: {
+                        click: function ($event) {
+                          return _vm.getData(_vm.currentPage - 1)
+                        },
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n                                Indietro\n                            "
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.lastPage, function (page) {
+                  return _c(
+                    "li",
+                    {
+                      key: page,
+                      staticClass: "page-item",
+                      class: { active: _vm.currentPage === page },
+                    },
+                    [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "page-link",
+                          on: {
+                            click: function ($event) {
+                              return _vm.getData(page)
+                            },
+                          },
+                        },
+                        [_vm._v(" " + _vm._s(page) + " ")]
+                      ),
+                    ]
+                  )
+                }),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "page-link",
+                      on: {
+                        click: function ($event) {
+                          return _vm.getData(_vm.currentPage + 1)
+                        },
+                      },
+                    },
+                    [_vm._v(" Avanti\n                            ")]
+                  ),
+                ]),
+              ],
+              2
+            ),
+          ]),
+        ]),
+      ]),
       _vm._v(" "),
       _c("TheFooter"),
     ],
