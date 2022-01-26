@@ -58,11 +58,11 @@
         },
         methods: {
 
-            getData(page=1) {
+            getData(page = 1) {
                  window.axios.get("/api/posts?page=" + page).then((resp) => {
                  this.postsList = resp.data.data;
                  this.currentPage = resp.data.current_page;
-                 this.lastPage = resp.data.lastPage;
+                 this.lastPage = resp.data.last_page;
         });
 
             }

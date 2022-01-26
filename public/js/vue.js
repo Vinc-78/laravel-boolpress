@@ -164,7 +164,7 @@ __webpack_require__.r(__webpack_exports__);
       window.axios.get("/api/posts?page=" + page).then(function (resp) {
         _this.postsList = resp.data.data;
         _this.currentPage = resp.data.current_page;
-        _this.lastPage = resp.data.lastPage;
+        _this.lastPage = resp.data.last_page;
       });
     }
   },

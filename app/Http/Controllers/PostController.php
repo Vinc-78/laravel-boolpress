@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     function index() {
 
-        $postInterni = Post::with('category')->with('tags')->paginate(2);
+        $postInterni = Post::with('category')->with('tags')->orderBY('updated_at')->paginate(2);
         
 
       
