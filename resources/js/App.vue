@@ -42,8 +42,8 @@
 </template>
 
 <script>
-    import TheFooter from './partials/TheFooter.vue'
-    import Post from './partials/Post.vue'
+    import TheFooter from './components/TheFooter.vue'
+    import Post from './components/Post.vue'
     export default {
         name:"App",
         components: {TheFooter, Post},
