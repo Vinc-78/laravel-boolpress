@@ -235,6 +235,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
+/* harmony import */ var _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SubNav.vue */ "./resources/js/components/SubNav.vue");
+//
 //
 //
 //
@@ -248,12 +250,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
   },
   component: {
-    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    SubNav: _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -269,6 +273,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
+/* harmony import */ var _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SubNav.vue */ "./resources/js/components/SubNav.vue");
 //
 //
 //
@@ -282,12 +287,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
   },
   component: {
-    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    SubNav: _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -305,6 +312,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/SubNav.vue */ "./resources/js/components/SubNav.vue");
 /* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
 /* harmony import */ var _components_Post_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Post.vue */ "./resources/js/components/Post.vue");
+//
+//
+//
 //
 //
 //
@@ -1707,7 +1717,13 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [_c("h1", [_vm._v(" About ")]), _vm._v(" "), _c("TheFooter")],
+    [
+      _c("SubNav"),
+      _vm._v(" "),
+      _c("h1", [_vm._v(" About ")]),
+      _vm._v(" "),
+      _c("TheFooter"),
+    ],
     1
   )
 }
@@ -1735,7 +1751,13 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [_c("h1", [_vm._v(" Contact ")]), _vm._v(" "), _c("TheFooter")],
+    [
+      _c("SubNav"),
+      _vm._v(" "),
+      _c("h1", [_vm._v(" Contact ")]),
+      _vm._v(" "),
+      _c("TheFooter"),
+    ],
     1
   )
 }
@@ -1794,7 +1816,7 @@ var render = function () {
                     },
                     [
                       _vm._v(
-                        "\n                                Indietro\n                            "
+                        "\n                                    Indietro\n                                "
                       ),
                     ]
                   ),
@@ -1836,7 +1858,7 @@ var render = function () {
                         },
                       },
                     },
-                    [_vm._v(" Avanti\n                            ")]
+                    [_vm._v(" Avanti\n                                ")]
                   ),
                 ]),
               ],

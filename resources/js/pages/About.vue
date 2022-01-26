@@ -1,7 +1,8 @@
 <template>
 
     <div>
-        
+    <SubNav /> 
+       
         <h1> About </h1>
 
     <TheFooter />
@@ -12,13 +13,14 @@
 
 <script>
 import TheFooter from "../components/TheFooter.vue";
+import SubNav from '../components/SubNav.vue'
 export default {
     data() {
         return {}
         
     },
     component: {
-        TheFooter,
+        TheFooter, SubNav
     }
 }
 </script>

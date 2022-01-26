@@ -1,7 +1,10 @@
 <template>
     <div>
+<!-- App.vue che carica Home si trova in guest.blade.php che extend l'import con i link ad admin -->
+<!-- Ho scelto di mantenere differenziati le due nava per studio e in questo modo per gestirne una lato 
+server in blade e una lato cliet in Vue -->
 
-        <SubNav />
+        <SubNav />  <!-- Qui c'è la nav del guest -->
 
          <h1 class="title">{{message}}</h1>
 
