@@ -95,7 +95,18 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _pages_Home_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/Home.vue */ "./resources/js/pages/Home.vue");
+/* harmony import */ var _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/SubNav.vue */ "./resources/js/components/SubNav.vue");
+/* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -103,10 +114,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   components: {
-    Home: _pages_Home_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    SubNav: _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -193,7 +206,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "SubNav"
+});
 
 /***/ }),
 
@@ -221,7 +236,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "TheFooter"
+});
 
 /***/ }),
 
@@ -234,8 +251,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
-/* harmony import */ var _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SubNav.vue */ "./resources/js/components/SubNav.vue");
 //
 //
 //
@@ -249,15 +264,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "About",
   data: function data() {
     return {};
-  },
-  component: {
-    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    SubNav: _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -272,8 +292,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
-/* harmony import */ var _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SubNav.vue */ "./resources/js/components/SubNav.vue");
 //
 //
 //
@@ -286,15 +304,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Contact",
   data: function data() {
     return {};
-  },
-  component: {
-    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    SubNav: _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -309,9 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/SubNav.vue */ "./resources/js/components/SubNav.vue");
-/* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
-/* harmony import */ var _components_Post_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Post.vue */ "./resources/js/components/Post.vue");
+/* harmony import */ var _components_Post_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Post.vue */ "./resources/js/components/Post.vue");
 //
 //
 //
@@ -353,23 +377,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   components: {
-    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    SubNav: _components_SubNav_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Post: _components_Post_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    Post: _components_Post_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -1526,7 +1538,17 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("Home")], 1)
+  return _c(
+    "div",
+    [
+      _c("SubNav"),
+      _vm._v(" "),
+      _c("router-view"),
+      _vm._v(" "),
+      _c("TheFooter"),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1622,36 +1644,48 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "container" }, [
-      _c("ul", { staticClass: "nav justify-content-end" }, [
-        _c("li", { staticClass: "nav-item" }, [
-          _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+  return _c("nav", { staticClass: "container" }, [
+    _c("ul", { staticClass: "nav justify-content-end" }, [
+      _c(
+        "li",
+        { staticClass: "nav-item" },
+        [
+          _c("router-link", { staticClass: "nav-link", attrs: { to: "/" } }, [
             _vm._v("Home"),
           ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-            _vm._v("About"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-            _vm._v("Contact"),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-]
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "li",
+        { staticClass: "nav-item" },
+        [
+          _c(
+            "router-link",
+            { staticClass: "nav-link", attrs: { to: { name: "about" } } },
+            [_vm._v("About")]
+          ),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "li",
+        { staticClass: "nav-item" },
+        [
+          _c(
+            "router-link",
+            { staticClass: "nav-link", attrs: { to: "/contact" } },
+            [_vm._v("Contact")]
+          ),
+        ],
+        1
+      ),
+    ]),
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -1715,19 +1749,38 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("SubNav"),
-      _vm._v(" "),
-      _c("h1", [_vm._v(" About ")]),
-      _vm._v(" "),
-      _c("TheFooter"),
-    ],
-    1
-  )
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        {
+          staticClass: "desk",
+          staticStyle: {
+            "background-image": "url(img/aboutus.jpg)",
+            "background-position": "center",
+            "background-size": "contain",
+            "background-repeat": "no-repeat",
+            height: "400px",
+            "margin-button": "25px",
+          },
+        },
+        [
+          _c(
+            "h1",
+            { staticStyle: { color: "white", "text-align": "center" } },
+            [_vm._v(" About US")]
+          ),
+        ]
+      ),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -1749,19 +1802,44 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("SubNav"),
-      _vm._v(" "),
-      _c("h1", [_vm._v(" Contact ")]),
-      _vm._v(" "),
-      _c("TheFooter"),
-    ],
-    1
-  )
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        {
+          staticClass: "desk",
+          staticStyle: {
+            "background-image": "url(img/contact.jpg)",
+            "background-position": "center",
+            "background-size": "contain",
+            "background-repeat": "no-repeat",
+            height: "400px",
+            "margin-button": "25px",
+          },
+        },
+        [
+          _c(
+            "h1",
+            {
+              staticStyle: {
+                color: "#21ff1a",
+                "text-align": "center",
+                "text-shadow": "2px 2px blue",
+              },
+            },
+            [_vm._v(" Contattaci ")]
+          ),
+        ]
+      ),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -1786,8 +1864,6 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("SubNav"),
-      _vm._v(" "),
       _c("h1", { staticClass: "title" }, [_vm._v(_vm._s(_vm.message))]),
       _vm._v(" "),
       _c("h2", [_vm._v("Sezione Post")]),
@@ -1816,7 +1892,7 @@ var render = function () {
                     },
                     [
                       _vm._v(
-                        "\n                                    Indietro\n                                "
+                        "\n                                Indietro\n                            "
                       ),
                     ]
                   ),
@@ -1858,7 +1934,7 @@ var render = function () {
                         },
                       },
                     },
-                    [_vm._v(" Avanti\n                                ")]
+                    [_vm._v(" Avanti\n                            ")]
                   ),
                 ]),
               ],
@@ -1867,8 +1943,6 @@ var render = function () {
           ]),
         ]),
       ]),
-      _vm._v(" "),
-      _c("TheFooter"),
     ],
     2
   )

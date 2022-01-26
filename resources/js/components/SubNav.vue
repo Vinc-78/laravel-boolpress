@@ -4,13 +4,13 @@
     <ul class="nav justify-content-end">
   
   <li class="nav-item">
-    <a class="nav-link" href="#">Home</a>
+    <router-link class="nav-link" to="/">Home</router-link>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">About</a>
+    <router-link class="nav-link" :to="{name:'about'}">About</router-link>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Contact</a>
+    <router-link class="nav-link" to="/contact">Contact</router-link>
   </li>
   
 </ul>
@@ -19,7 +19,10 @@
 </template>
 
 <script>
-export default {};
+
+export default {
+    name: "SubNav",
+};
 </script>
 
 <style></style>

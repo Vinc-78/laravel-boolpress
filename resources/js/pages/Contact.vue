@@ -1,30 +1,43 @@
 <template>
 
-    <div>
-    <SubNav />   
-        <h1> Contact </h1>
+     <div class="container" >
 
-    <TheFooter />
+    
+
+        <div class="desk" style="background-image: url(img/contact.jpg);
+                                background-position: center;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                height: 400px;
+                                margin-button:25px">
+
+            <h1 style="color:#21ff1a; 
+            text-align:center; 
+            text-shadow: 2px 2px blue; "> Contattaci </h1>
+
+        </div>
+
+   
 
     </div>
 
 </template>
 
 <script>
-import TheFooter from "../components/TheFooter.vue";
-import SubNav from '../components/SubNav.vue'
+
 export default {
+    name:"Contact",
     data() {
         return {}
         
     },
-    component: {
-        TheFooter, SubNav,
-    }
+   
 }
 </script>
 
 
 <style lang="scss" >
+
+
 
 </style>

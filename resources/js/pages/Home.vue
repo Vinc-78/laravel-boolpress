@@ -1,10 +1,5 @@
 <template>
     <div>
-<!-- App.vue che carica Home si trova in guest.blade.php che extend l'import con i link ad admin -->
-<!-- Ho scelto di mantenere differenziati le due nava per studio e in questo modo per gestirne una lato 
-server in blade e una lato cliet in Vue -->
-
-        <SubNav />  <!-- Qui c'è la nav del guest -->
 
          <h1 class="title">{{message}}</h1>
 
@@ -41,20 +36,16 @@ server in blade e una lato cliet in Vue -->
                 </div>
             </div>
        
-
-        <TheFooter></TheFooter>
-
     </div>
 </template>
 
 <script>
-    import SubNav from '../components/SubNav.vue'
-    import TheFooter from '../components/TheFooter.vue'
+   
     import Post from '../components/Post.vue'
     export default {
         name:"App",
         components: {
-            TheFooter, SubNav, Post
+             Post
         },
         
         data() {

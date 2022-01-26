@@ -1,31 +1,40 @@
 <template>
 
-    <div>
-    <SubNav /> 
-       
-        <h1> About </h1>
+    <div class="container" >
 
-    <TheFooter />
+    
+
+        <div class="desk" style="background-image: url(img/aboutus.jpg);
+                                background-position: center;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                height: 400px;
+                                margin-button:25px">
+
+            <h1 style="color:white; text-align:center; "> About US</h1>
+
+        </div>
+
+    
 
     </div>
 
 </template>
 
 <script>
-import TheFooter from "../components/TheFooter.vue";
-import SubNav from '../components/SubNav.vue'
+
 export default {
+    name:"About",
     data() {
         return {}
         
     },
-    component: {
-        TheFooter, SubNav
-    }
+   
 }
 </script>
 
 
-<style lang="scss" >
+<style  >
+
 
 </style>
