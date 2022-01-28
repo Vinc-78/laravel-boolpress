@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
   
 Route::get("/posts", "PostController@index");
+
+Route::get("/posts/{slug}", "PostController@show");
+/* Questa è un ulteriore rotta per leggere i dettagli del post */

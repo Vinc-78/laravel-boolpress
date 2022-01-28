@@ -2,7 +2,7 @@
 
      <div class="container" >
 
-    
+    <h1>{{ $route.meta.title ? $route.meta.title : "Titolo non passato con meta" }}</h1>
 
         <div class="desk" style="background-image: url(img/contact.jpg);
                                 background-position: center;

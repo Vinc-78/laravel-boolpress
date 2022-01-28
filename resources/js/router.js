@@ -4,6 +4,7 @@ import VueRouter from "vue-router";
 import Home from "./pages/Home.vue"
 import About from "./pages/About.vue"
 import Contact from "./pages/Contact.vue"
+import PostPage from "./pages/PostPage.vue"
 
 Vue.use(VueRouter);
 
@@ -18,12 +19,22 @@ const router = new VueRouter({
         {
             path: "/about",
             name: "about",
-            component: About
+            component: About,
+            meta: {
+                title:'Titolo agg con meta: ABOUT',
+            }
         },
         {
             path: "/contact",
             name: "contact",
-            component: Contact
+            component: Contact,
+    
+        },
+        {
+            path: "/post/:slug",
+            name: "post.single",
+            component: PostPage,
+           
         },
 
     ]

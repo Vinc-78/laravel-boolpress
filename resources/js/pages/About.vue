@@ -2,14 +2,9 @@
 
     <div class="container" >
 
-    
+        <h1>{{ $route.meta.title ? $route.meta.title : "Titolo non passato con meta" }}</h1>
 
-        <div class="desk" style="background-image: url(img/aboutus.jpg);
-                                background-position: center;
-                                background-size: contain;
-                                background-repeat: no-repeat;
-                                height: 400px;
-                                margin-button:25px">
+        <div class="desk">
 
             <h1 style="color:white; text-align:center; "> About US</h1>
 
@@ -34,7 +29,17 @@ export default {
 </script>
 
 
-<style  >
+<style lang="scss">
+
+.desk{         
+       background-image: url('../../../public/img/aboutus.jpg');
+       background-position: center;
+       background-size: contain;
+       background-repeat: no-repeat;
+       height: 400px;
+       margin-bottom: 50px;
+                                
+                                }
 
 
 </style>

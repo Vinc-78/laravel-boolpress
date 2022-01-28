@@ -1,12 +1,13 @@
 <template>
     <!-- Post preview-->
     <div class="post-preview my-3">
-        <a :href="'/admin/posts/' + post.slug">  <!-- Questo mi permette lo show dei post post.show -->
+        
+        <router-link :to="{ name: 'post.single', params: {slug: post.slug} }">  
             <h2 class="post-title">
                 {{ post.title }}
             </h2>
                     
-        </a>
+        </router-link>
          <p v-if="post.category && post.category.name" class="post-meta">
             Categoria: {{post.category.name}}
            </p>
