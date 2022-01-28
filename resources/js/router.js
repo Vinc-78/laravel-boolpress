@@ -32,7 +32,7 @@ const router = new VueRouter({
         },
         {
             path: "/post/:slug",
-            name: "post.single",
+            name: "post.show",
             component: PostPage,
            
         },

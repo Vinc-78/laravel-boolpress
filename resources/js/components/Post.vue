@@ -2,7 +2,7 @@
     <!-- Post preview-->
     <div class="post-preview my-3">
         
-        <router-link :to="{ name: 'post.single', params: {slug: post.slug} }">  
+        <router-link :to="{ name: 'post.show', params: {slug: post.slug} }">  
             <h2 class="post-title">
                 {{ post.title }}
             </h2>

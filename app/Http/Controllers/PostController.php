@@ -18,7 +18,8 @@ class PostController extends Controller
 
     function show($slug){
 
-      $post = Post::where("slug", $slug)->first();
+      $post = Post::where("slug", $slug)->with('category')->with('tags')->first();
+    
 
       if (!$post) {
         throw new NotFoundHttpException("Post non trovato");

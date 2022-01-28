@@ -484,6 +484,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "PostPage",
@@ -504,10 +511,9 @@ __webpack_require__.r(__webpack_exports__);
     datiPost: function datiPost() {
       var _this = this;
 
-      var url = "/posts/" + this.$route.params.slug;
+      var url = "/api/posts/" + this.$route.params.slug;
       window.axios.get(url).then(function (resp) {
         _this.post = resp.data;
-        console.log(_this.post);
       });
       /* console.log(window.axios.get("posts/" + this.$route.params.slug)); */
     }
@@ -1869,9 +1875,7 @@ var render = function () {
       _c(
         "router-link",
         {
-          attrs: {
-            to: { name: "post.single", params: { slug: _vm.post.slug } },
-          },
+          attrs: { to: { name: "post.show", params: { slug: _vm.post.slug } } },
         },
         [
           _c("h2", { staticClass: "post-title" }, [
@@ -2280,11 +2284,30 @@ var render = function () {
     "div",
     { staticClass: "container" },
     [
-      _c("PageHeader", {
-        attrs: { title: _vm.post.title, imgUrl: _vm.post.coverImg },
+      _c("h1", { staticStyle: { "text-align": "center" } }, [
+        _vm._v("Singolo Post"),
+      ]),
+      _vm._v(" "),
+      _c("h2", [_vm._v(_vm._s(_vm.post.title))]),
+      _vm._v(" "),
+      _vm._l(_vm.post.tags, function (tag) {
+        return _c(
+          "p",
+          { key: tag.id, staticClass: "badge bg-primary mx-1 text-white" },
+          [_vm._v("\n        " + _vm._s(tag.name) + "\n        ")]
+        )
       }),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("img", {
+        staticStyle: { height: "250px" },
+        attrs: { src: _vm.post.coverImg, alt: "" },
+      }),
+      _vm._v(" "),
+      _c("p", [_vm._v(_vm._s(_vm.post.body))]),
     ],
-    1
+    2
   )
 }
 var staticRenderFns = []
@@ -18365,7 +18388,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     component: _pages_Contact_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
     path: "/post/:slug",
-    name: "post.single",
+    name: "post.show",
     component: _pages_PostPage_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }]
 });
