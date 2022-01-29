@@ -10967,3 +10967,7 @@ a.text-dark:focus {
   margin-bottom: 15px;
 }
 
+.router-link-exact-active {
+  color: var(--red) !important;
+}
+
