@@ -21,6 +21,11 @@ server in blade e una lato cliet in Vue -->
     export default {
         name:"App",
         components: { SubNav, TheFooter },
+
+        /* mounted() {
+            console.log(this.$router);
+             console.log(this.$route);
+        } */
         
     }
 </script>

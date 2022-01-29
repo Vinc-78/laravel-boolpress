@@ -23,11 +23,11 @@
 </template>
 
 <script>
-import PageHeader from '../components/PageHeader.vue'
+
 export default {
     
     name:"PostPage",
-    components:{PageHeader},
+    
     data(){
         return {
             post: {
@@ -39,7 +39,8 @@ export default {
    
     methods: {
         datiPost() {
-    
+
+                
             const url = "/api/posts/" + this.$route.params.slug; 
            
             window.axios.get(url).then((resp)=>{

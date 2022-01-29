@@ -9,12 +9,30 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PostController extends Controller
 {
-    function index() {
+  public function index(Request $request) {
+    $limit = $request->query("limit");
+    $category = $request->query("category");
 
-        $postInterni = Post::with('category')->with('tags')->orderBY('updated_at')->paginate(2);
-        
-        return $postInterni;
-      }
+    if ($limit > 10) {
+      $limit = 10;
+    }
+
+    $postsList = Post::with("category")
+      ->with("tags")
+      ->orderBy("created_at", "DESC");
+
+    if ($category) {
+      $postsList = $postsList->where("category_id", $category);
+    }
+
+    if ($limit) {
+      $postsList = $postsList->limit($limit)->get();
+    } else {
+      $postsList = $postsList->paginate(2);
+    }
+
+    return response()->json($postsList);
+  }
 
     function show($slug){
 
