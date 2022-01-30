@@ -26,3 +26,4 @@ Route::get("/posts/{slug}", "PostController@show");
 
 Route::get("/categories", "CategoryController@index");
 /* Per gestire le categorie  */
+

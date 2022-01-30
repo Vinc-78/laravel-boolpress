@@ -8,7 +8,7 @@
 
                     <h1 class="title">{{message}}</h1>
 
-                    <h2>Sezione Post - Ultimi 3 post </h2>
+                    <h2>Sezione Post  </h2>
                     <Post
                     v-for="post in postsList"
                     :key="post.id"
@@ -16,7 +16,8 @@
                     ></Post>
                     
                     <!-- Tasti per le paginazione -->
-                     <div class="row">
+                   
+                     <div class="row" v-if="lastPage > 1">
                             <div class="col justify-content-center d-flex">
                                 <nav>
                                     <ul class="pagination">
@@ -41,18 +42,11 @@
                             </div>
                         </div>
 
-
+                   
                 </div>
-
-                
-            </div>
-
-
-            
+            </div>     
         </div>
-
-         
-       
+ 
     </div>
 </template>
 
@@ -74,9 +68,6 @@
             }
         },
         methods: {
-
-          
-
             getData(page = 1) {
 
                 const category = this.$route.query.category;

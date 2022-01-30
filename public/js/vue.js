@@ -354,12 +354,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
@@ -2227,87 +2221,93 @@ var render = function () {
           [
             _c("h1", { staticClass: "title" }, [_vm._v(_vm._s(_vm.message))]),
             _vm._v(" "),
-            _c("h2", [_vm._v("Sezione Post - Ultimi 3 post ")]),
+            _c("h2", [_vm._v("Sezione Post  ")]),
             _vm._v(" "),
             _vm._l(_vm.postsList, function (post) {
               return _c("Post", { key: post.id, attrs: { post: post } })
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col justify-content-center d-flex" }, [
-                _c("nav", [
+            _vm.lastPage > 1
+              ? _c("div", { staticClass: "row" }, [
                   _c(
-                    "ul",
-                    { staticClass: "pagination" },
+                    "div",
+                    { staticClass: "col justify-content-center d-flex" },
                     [
-                      _c("li", [
+                      _c("nav", [
                         _c(
-                          "button",
-                          {
-                            staticClass: "page-link",
-                            on: {
-                              click: function ($event) {
-                                return _vm.getData(_vm.currentPage - 1)
-                              },
-                            },
-                          },
+                          "ul",
+                          { staticClass: "pagination" },
                           [
-                            _vm._v(
-                              "\n                                            Indietro\n                                        "
-                            ),
-                          ]
-                        ),
-                      ]),
-                      _vm._v(" "),
-                      _vm._l(_vm.lastPage, function (page) {
-                        return _c(
-                          "li",
-                          {
-                            key: page,
-                            staticClass: "page-item",
-                            class: { active: _vm.currentPage === page },
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "page-link",
-                                on: {
-                                  click: function ($event) {
-                                    return _vm.getData(page)
+                            _c("li", [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "page-link",
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.getData(_vm.currentPage - 1)
+                                    },
                                   },
                                 },
-                              },
-                              [_vm._v(" " + _vm._s(page) + " ")]
-                            ),
-                          ]
-                        )
-                      }),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "page-link",
-                            on: {
-                              click: function ($event) {
-                                return _vm.getData(_vm.currentPage + 1)
-                              },
-                            },
-                          },
-                          [
-                            _vm._v(
-                              " Avanti\n                                        "
-                            ),
-                          ]
+                                [
+                                  _vm._v(
+                                    "\n                                            Indietro\n                                        "
+                                  ),
+                                ]
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _vm._l(_vm.lastPage, function (page) {
+                              return _c(
+                                "li",
+                                {
+                                  key: page,
+                                  staticClass: "page-item",
+                                  class: { active: _vm.currentPage === page },
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass: "page-link",
+                                      on: {
+                                        click: function ($event) {
+                                          return _vm.getData(page)
+                                        },
+                                      },
+                                    },
+                                    [_vm._v(" " + _vm._s(page) + " ")]
+                                  ),
+                                ]
+                              )
+                            }),
+                            _vm._v(" "),
+                            _c("li", [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "page-link",
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.getData(_vm.currentPage + 1)
+                                    },
+                                  },
+                                },
+                                [
+                                  _vm._v(
+                                    " Avanti\n                                        "
+                                  ),
+                                ]
+                              ),
+                            ]),
+                          ],
+                          2
                         ),
                       ]),
-                    ],
-                    2
+                    ]
                   ),
-                ]),
-              ]),
-            ]),
+                ])
+              : _vm._e(),
           ],
           2
         ),
