@@ -6,6 +6,10 @@
   <li class="nav-item">
     <router-link class="nav-link" to="/">Home</router-link>
   </li>
+
+   <li class="nav-item">
+    <router-link class="nav-link" to="/post">AllPost</router-link>
+  </li>
   <li class="nav-item">
 
     <router-link class="nav-link" 

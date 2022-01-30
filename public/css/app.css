@@ -10969,5 +10969,6 @@ a.text-dark:focus {
 
 .router-link-exact-active {
   color: var(--red) !important;
+  font-weight: bolder;
 }
 

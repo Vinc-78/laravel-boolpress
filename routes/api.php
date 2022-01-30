@@ -22,3 +22,7 @@ Route::get("/posts", "PostController@index");
 
 Route::get("/posts/{slug}", "PostController@show");
 /* Questa è un ulteriore rotta per leggere i dettagli del post */
+
+
+Route::get("/categories", "CategoryController@index");
+/* Per gestire le categorie  */

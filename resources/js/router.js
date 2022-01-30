@@ -5,6 +5,7 @@ import Home from "./pages/Home.vue"
 import About from "./pages/About.vue"
 import Contact from "./pages/Contact.vue"
 import PostPage from "./pages/PostPage.vue"
+import AllPost from "./pages/AllPost.vue"
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,12 @@ const router = new VueRouter({
             name: "contact",
             component: Contact,
     
+        },
+        {
+            path: "/post/",
+            name: "posts.index",
+            component: AllPost,
+           
         },
         {
             path: "/post/:slug",
