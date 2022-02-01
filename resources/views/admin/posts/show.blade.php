@@ -37,8 +37,12 @@
 
 
         <div class="form-group">
+          <img style="height: 250px" src={{ asset("storage/" .  $post->coverImg )}} alt="">
+         </div>
+
+        {{-- <div class="form-group">
          <img style="height: 250px" src={{ $post->coverImg}} alt="">
-        </div>
+        </div> --}}
       
 
         <div class="d-flex">

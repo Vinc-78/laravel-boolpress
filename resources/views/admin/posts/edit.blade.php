@@ -6,6 +6,8 @@
 
   <div class="container">
     <form action="{{ route('admin.posts.update', $post->slug) }}" method="post"
+      enctype="multipart/form-data"
+
       class="mb-5">
       @csrf
       @method('put')
@@ -71,8 +73,20 @@
           @enderror
         </div>
 
-
         <div class="form-group">
+          <label class="form-label">Immagine</label>
+          <input id="coverImg" type="file"
+            class="form-control @error('coverImg') is-invalid @enderror" name="coverImg"
+            value="{{ $post->coverImg}}" required >
+
+          @error('coverImg')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+          @enderror
+        </div>
+
+        {{-- <div class="form-group">
           <label class="form-label">Immagine</label>
           <input id="coverImg" type="text"
             class="form-control @error('coverImg') is-invalid @enderror" name="coverImg"
@@ -83,7 +97,7 @@
             <strong>{{ $message }}</strong>
           </span>
           @enderror
-        </div>
+        </div> --}}
       
 
         <div class="d-flex">

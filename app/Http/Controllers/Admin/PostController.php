@@ -8,6 +8,7 @@ use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
@@ -96,9 +97,19 @@ class PostController extends Controller
 
         $post->fill($request->all());
 
+        $post->coverImg = Storage::put("immagini", $data["coverImg"]);
+
         $post->slug=$this->generateSlug($data['title']); /* Richiamo la funzione slug */
 
         $post->user_id = Auth::user()->id; /* Qui specifico l'utente */
+
+        if($request->file("coverImg")) {
+
+            $post->coverImg = Storage::put("immagini", $data["coverImg"]);
+
+        }
+
+       
         $post->save();
 
         if(key_exists("tags",$data)){
@@ -165,6 +176,12 @@ class PostController extends Controller
        /*  $post->update($data); per non salvare due volte uso prima fill e poi save */
 
         $post->fill($data);
+
+        if ($post->coverImg) {
+            Storage::delete($post->coverImg); /* Per cancellare l'immagine prima di caricare una nuova */
+        }
+
+        $post->coverImg = Storage::put("immagini", $data["coverImg"]);
 
         if($titleChanged){
             $post->slug = $this->generateSlug($data["title"]);

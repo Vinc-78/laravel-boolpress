@@ -6,7 +6,7 @@
 
   <div class="container">
     <form action="{{ route('admin.posts.store') }}" method="post"
-      class="mb-5">
+      class="mb-5" enctype="multipart/form-data">
       @csrf
       
 
@@ -78,7 +78,7 @@
 
         <div class="form-group">
           <label class="form-label">Immagine</label>
-          <input id="coverImg" type="text"
+          <input id="coverImg" type="file"
             class="form-control @error('coverImg') is-invalid @enderror" name="coverImg"
             value="{{ old('coverImg') }}" required >
 
